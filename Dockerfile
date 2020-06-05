@@ -17,7 +17,7 @@ ENV DEBIAN_FRONTEND=noninteractive
    unzip \   
    && curl -L -o 7660221.zip -u octocat:${5afc7950c6514b53160e78406fe836771b0500ca} "https://api.github.com/repos/eds000n/qemu-xtensa-esp32/actions/artifacts/7660221/zip"  && \
    wget https://github.com/espressif/qemu/raw/esp-develop/pc-bios/esp32-r0-rom.bin  && \
-   unzip 7660221  -d .
+   unzip 7660221.zip  -d .
 
  EXPOSE 1234
 
