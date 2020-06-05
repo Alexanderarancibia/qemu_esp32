@@ -13,9 +13,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Make sure the image is updated, install some prerequisites,
  RUN apt-get update && apt-get install -y \
    xz-utils libpixman-1-0 libpng16-16 libjpeg8 libglib2.0 \
-   wget curl \
-   unzip \   
-   && curl -L -o 7660221.zip -u octocat:$5afc7950c6514b53160e78406fe836771b0500ca "https://api.github.com/repos/eds000n/qemu-xtensa-esp32/actions/artifacts/7660221/zip"  && \
+   wget curl unzip\
+ RUN curl -L -o 7660221.zip -u octocat:d185e982770a84612b41235071d9bd569264d836 "https://api.github.com/repos/eds000n/qemu-xtensa-esp32/actions/artifacts/7660221/zip"  && \
    wget https://github.com/espressif/qemu/raw/esp-develop/pc-bios/esp32-r0-rom.bin  && \
    unzip 7660221.zip  -d .
 
